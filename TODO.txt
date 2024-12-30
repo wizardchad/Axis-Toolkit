@@ -1,0 +1,16 @@
+Phase 1 (Core)
+----
+
+    (Waiting) http.rs module 
+    (Waiting) snmp.rs module
+    (Waiting) ArgumentParser
+
+    (Waiting)
+
+Phase 2 (Modules)
+----
+
+
+Phase 3 (Security)
+----
+

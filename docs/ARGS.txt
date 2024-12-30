@@ -1,0 +1,133 @@
+vapix-kit --help
+
+USAGE:
+    vapix-kit [OPTIONS] [COMMANDS] 
+     
+    DEVICE FIRMWARE MANAGEMENT
+        --firmware-check
+            CHECK THE CURRENT FIRMWARE VERSION ON THE DEVICE
+
+        --firmware-compare
+            COMPARE FIRMWARE VERSION AGAINST THE LATEST VERISON AVAILABLE 
+
+        --firmware-update
+            UPDATE DEVICE FIRMWARE TO THE LATEST VERSION
+
+        --firmware-rollback
+            ROLL BACK THE FIRMWARE TO THE PREVIOUS VERSION
+
+    DEVICE INFORMATION & STATUS
+        --uptime
+            DISPLAY DEVICE UPTIME
+
+        --check-model
+            IDENTIFY DEVICE MODEL
+
+        --check-mac-address
+            RETRIEVE DEVICE MAC ADDRESS
+
+        --check-network
+            DISPLAY NETWORK CONFIGURATION DETAILS
+
+        --device-info
+            SHOW DEVICE INFORMATION SUMMARY
+
+        --health
+            CHECK THE DEVICE OVERALL HEALTH STATUS
+
+    NETWORK TOOLS
+        --ping
+            PING THE DEVICE TO CHECK CONNECTIVITY
+
+        --discovery
+            DISCOVER DEVICES ON A NETWORK OR SPECIFIED SUBNET
+
+        --reboot
+            REBOOT THE DEVICE
+        
+        --latency-test
+            MEASURE LATENCY BETWEEN THE TOOL AND DEVICE
+        
+    CONFIGURATION MANAGEMENT
+        --backup-config
+            BACKUP THE CURRENT DEVICE CONFIGURATION
+
+        --restore-config
+            RESTORE CONFIGURATION FROM A BACKUP
+        
+        --config-compare
+            COMPARE THE CURRENT CONFIGURATION WITH A BACKUP
+
+    SERVICE MANAGEMENT
+        --service-status [service]
+            CHECK THE STATUS OF A SPECIFIC SERVICE (NTP, SSH, SNMP, TELNET)
+        
+        --service-enable [service]
+            ENABLE A SPECIFIC SERVICE ON THE DEVICE
+        
+        --service-disable [service]
+            DISABLE A SPECIFIC SERVICE ON THE DEVICE
+
+    USER MANAGEMENT
+        --add-user [username password]
+            ADD A NEW USER TO THE DEVICE WITH SPECIFIED CREDENTIALS
+
+        --delete-user [username]
+            REMOVE AN EXISTING USER FROM THE DEVICE
+        
+        --list-users
+            DISPLAY A LIST OF CURRENT DEVICE USERS
+
+    SECURITY & COMPLIANCE
+        --compliance-report
+            RUN SECURITY CHECKS FOR WEAK PASSWORDS, 
+            DEFAULT ADMIN NAMES, OLD FIRMWARE, AND KNOWN VULNERABILITIES
+
+        --health-report
+            GENERATE A REPORT ON DEVICE HEALTH STATUS
+
+        --generate-report 
+            GENERATE A CUSTOM REPORT FROM A NON-REPORTING SCAN
+        
+        --user-audit
+            AUDIT DEVICE USER ACCOUNTS FOR SECURITY COMPLIANCE
+
+        --vulnerability-check
+            CHECK FOR KNOWN DEVICE VULNERABILITIES
+
+    SUPPORT OPTIONS
+        --host [IP address]
+            SPECIFY THE IP ADDRESS OF THE DEVICE TO TARGET
+
+        --range [start-end IP]
+            SPECIFY AN IP RANGE FOR DISCOVERY AND SCANNING, E.G., 192.168.1.1-23
+            
+        --subnet [subnet]
+            SPECIFY A SUBNET FOR DISCOVERY AND SCANNING
+
+        --auth [USER PASS]
+            SPECIFY USER CREDENTIALS FOR AUTHENTICATION
+
+    EXAMPLE COMMANDS
+        vapix-kit --firmware-check --range 192.168.1.0-23
+            CHECK THE FIRMWARE VERSION OF ALL DEVICES IN A SPECIFIED RANGE
+        
+        vapix-kit --discovery --range 192.168.1.0-23
+            DISCOVER DEVICES WITHIN THE 192.168.1.0-23 RANGE
+        
+        vapix-kit --add-user admin P@ssw0rd --host 192.168.1.10
+            ADD A NEW USER TO A SPECIFIC DEVICE WITH THE PROVIDED CREDENTIALS
+
+        vapix-kit --firmware-check --host 192.168.1.44
+            CHECK THE FIRMWARE VERSION OF A DEVICE AT THE SPECIFIED IP
+        
+        vapix-kit --discovery --subnet 192.168.1.0/24
+            DISCOVER DEVICES WITHIN THE 192.168.1.0/24 SUBNET
+        
+        vapix-kit --backup-config --host 192.168.1.44
+            CREATE A BACKUP OF DEVICE CONFIGURATION FOR THE SPECIFIED HOST
+        
+        vapix-kit --service-status ssh --host 192.168.1.44
+            CHECK IF SSH SERVICE IS ENABLED ON THE DEVICE
+
+
