@@ -1,16 +1,44 @@
 Phase 1 (Core)
 ----
 
-    (Waiting) http.rs module 
-    (Waiting) snmp.rs module
-    (Waiting) ArgumentParser
+    (Waiting) args.rs
 
-    (Waiting)
+    (Waiting) helpers/http.rs
+    (Waiting) helpers/snmp.rs 
+
+    (Waiting) core/output/redis.rs 
+    (Waiting) core/output/terminal.rs 
+    (Waiting) core/output/websocket.rs 
+
+    (waiting) core/target/host.rs
+    (waiting) core/target/subnet.rs
+    (waiting) core/target/range.rs
 
 Phase 2 (Modules)
 ----
-
+    
+    (Waiting) d_info.rs
+    (Waiting) d_model.rs
+    (Waiting) d_uptime.rs
+    (Waiting) m_reboot.rs
+    (Waiting) m_service.rs
+    (Waiting) m_user.rs
+    (Waiting) n_latency.rs
+    (Waiting) n_network.rs
+    (Waiting) n_ping.rs
+    (Waiting) v_check.rs
+    (Waiting) v_compare.rs
 
 Phase 3 (Security)
 ----
+
+    (Waiting) m_config.rs
+    (Waiting) n_discovery.rs
+    (Waiting) v_rollback.rs
+    (Waiting) v_update.rs
+
+    (Waiting) exploit.rs 
+    (Waiting) security.rs
+    (Waiting) audit.rs
+
 
